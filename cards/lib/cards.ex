@@ -38,4 +38,11 @@ defmodule Cards do
         "That file does not exist"
     end
   end
+
+  def create_hand(hand_size) do
+    # The created deck automatically gets injected as the first argument
+    Cards.create_deck
+    |> Cards.shuffle
+    |> Cards.deal(hand_size)
+  end
 end
