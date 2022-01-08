@@ -1,12 +1,11 @@
-# A module is a collection of methods
-# Elixir has no concept of instance variables
-# "Arity" is the number of arguments a function accepts
 defmodule Cards do
+  @moduledoc """
+    Provides methods for creating and handling a deck of cards.
+  """
+
   def create_deck do 
     values = ["Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"]
     suits = ["Spades", "Clubs", "Hearts", "Diamonds"]
-    #List comprehension - "for" loop
-    #This is a mapping function
     for suit <- suits, value <- values do
       "#{value} of #{suit}"
     end
@@ -25,7 +24,6 @@ defmodule Cards do
   end
 
   def save(deck, filename) do 
-    #Invoke erlang code with the colon
     binary = :erlang.term_to_binary(deck)
     File.write(filename, binary)
   end
@@ -40,7 +38,6 @@ defmodule Cards do
   end
 
   def create_hand(hand_size) do
-    # The created deck automatically gets injected as the first argument
     Cards.create_deck
     |> Cards.shuffle
     |> Cards.deal(hand_size)

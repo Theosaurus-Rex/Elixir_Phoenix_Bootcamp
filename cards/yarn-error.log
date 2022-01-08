@@ -1,0 +1,36 @@
+Arguments: 
+  /Users/theoharris/.nvm/versions/node/v16.0.0/bin/node /Users/theoharris/.nvm/versions/node/v16.0.0/bin/yarn add ex_doc
+
+PATH: 
+  /Users/theoharris/.nvm/versions/node/v16.0.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  16.0.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/ex_doc: Not found
+      at Request.params.callback [as _callback] (/Users/theoharris/.nvm/versions/node/v16.0.0/lib/node_modules/yarn/lib/cli.js:67029:18)
+      at Request.self.callback (/Users/theoharris/.nvm/versions/node/v16.0.0/lib/node_modules/yarn/lib/cli.js:140883:22)
+      at Request.emit (node:events:365:28)
+      at Request.<anonymous> (/Users/theoharris/.nvm/versions/node/v16.0.0/lib/node_modules/yarn/lib/cli.js:141855:10)
+      at Request.emit (node:events:365:28)
+      at IncomingMessage.<anonymous> (/Users/theoharris/.nvm/versions/node/v16.0.0/lib/node_modules/yarn/lib/cli.js:141777:12)
+      at Object.onceWrapper (node:events:471:28)
+      at IncomingMessage.emit (node:events:377:35)
+      at endReadableNT (node:internal/streams/readable:1312:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
