@@ -14,6 +14,10 @@ defmodule Cards do
     end
   end
 
+  @doc """
+    Returns the deck list passed to the function in a randomized order.
+  """
+
   def shuffle(deck) do
     Enum.shuffle(deck)
   end
@@ -49,11 +53,17 @@ defmodule Cards do
     Enum.split(deck, hand_size)
   end
 
+  @doc """
+    Writes the passed decklist to a file with the specified filename.
+  """
   def save(deck, filename) do 
     binary = :erlang.term_to_binary(deck)
     File.write(filename, binary)
   end
 
+  @doc """
+    Retrieves a deck from a file with the specified filename. Throws an error if no matching file is found.
+  """
   def load(filename) do
     case File.read(filename) do
       {:ok, binary} -> 
@@ -63,6 +73,10 @@ defmodule Cards do
     end
   end
 
+  @doc """
+    Performs creation, shuffling and dealing of a new deck.
+    Useful for starting a new game of cards.
+  """
   def create_hand(hand_size) do
     Cards.create_deck
     |> Cards.shuffle
