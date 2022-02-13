@@ -1,4 +1,6 @@
 defmodule Identicon do
+
+  @spec main(binary) :: :ok | {:error, atom}
   def main(input) do
     input
     |> hash_input
